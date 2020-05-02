@@ -12,6 +12,7 @@ def get_new_building_status(apps, schema_editor):
             flat.new_building = False
         flat.save()
 
+
 class Migration(migrations.Migration):
 
     dependencies = [
