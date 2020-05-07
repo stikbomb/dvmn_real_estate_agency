@@ -25,7 +25,7 @@ class Flat(models.Model):
 
     has_balcony = models.NullBooleanField("Наличие балкона", db_index=True)
     active = models.BooleanField("Активно-ли объявление", db_index=True)
-    construction_year = models.IntegerField("Год постройки здания", null=True, blank=True, db_index=True)
+    construction_year = models.IntegerField("Год постройки здания", null=True, db_index=True)
     new_building = models.NullBooleanField("Является ли новостройкой", blank=True, db_index=True)
     liked_by = models.ManyToManyField(User, related_name="liked_posts", blank=True, verbose_name='Кто лайкнул')
 
